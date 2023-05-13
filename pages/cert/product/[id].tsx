@@ -13,6 +13,8 @@ import {
   InferGetStaticPropsType,
 } from 'next';
 
+export const runtime = 'experimental-edge';
+
 // ====================
 // 1. Static Data (SSG)
 // ====================
@@ -22,7 +24,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const products = await getProducts();
 
   const productIds = products
-    .slice(0, 3) // Only pre-render our "most popular" products
+    // .slice(0, 3) // Only pre-render our "most popular" products
     .map((product) => product.id); // ["1", "2", "3"]
 
   return {

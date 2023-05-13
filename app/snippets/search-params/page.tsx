@@ -103,3 +103,5 @@ export default async function Page({ searchParams }: { searchParams: any }) {
     </div>
   );
 }
+
+export const runtime = 'edge';

@@ -37,3 +37,5 @@ export default async function Layout({
     </div>
   );
 }
+
+export const runtime = 'edge';

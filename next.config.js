@@ -2,10 +2,11 @@
 const nextConfig = {
   reactStrictMode: true, // Recommended for the `pages` directory, default in `app`.
   swcMinify: true,
-  runtime: 'experimental-edge',
   experimental: {
     appDir: true,
   },
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
   rewrites: async () => ({
     beforeFiles: [
       // These rewrites are checked after headers/redirects

@@ -17,7 +17,7 @@ export default async function Page({ params }: { params: { id: string } }) {
       />
 
       <div className="relative">
-        <div className="absolute top-2 -left-4">
+        <div className="absolute -left-4 top-2">
           <Ping />
         </div>
       </div>
@@ -40,7 +40,7 @@ export default async function Page({ params }: { params: { id: string } }) {
       </Suspense>
 
       <div className="relative">
-        <div className="absolute top-2 -left-4">
+        <div className="absolute -left-4 top-2">
           <Ping />
         </div>
       </div>
@@ -63,3 +63,5 @@ export default async function Page({ params }: { params: { id: string } }) {
     </div>
   );
 }
+
+export const runtime = 'edge';

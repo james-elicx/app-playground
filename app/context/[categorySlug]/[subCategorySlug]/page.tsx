@@ -22,3 +22,5 @@ export default async function Page({
     </Boundary>
   );
 }
+
+export const runtime = 'edge';
