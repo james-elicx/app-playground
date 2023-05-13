@@ -30,7 +30,7 @@ function LoadingDots() {
 
 async function UserSpecificDetails({ productId }: { productId: string }) {
   const data = await fetch(
-    `https://${getBaseUrl()}/api/products?id=${productId}&delay=500&filter=price,usedPrice,leadTime,stock`,
+    `${getBaseUrl()}/api/products?id=${productId}&delay=500&filter=price,usedPrice,leadTime,stock`,
     // {
     //   // We intentionally disable Next.js Cache to better demo
     //   // streaming
