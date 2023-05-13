@@ -31,11 +31,11 @@ function LoadingDots() {
 async function UserSpecificDetails({ productId }: { productId: string }) {
   const data = await fetch(
     `https://${getBaseUrl()}/api/products?id=${productId}&delay=500&filter=price,usedPrice,leadTime,stock`,
-    {
-      // We intentionally disable Next.js Cache to better demo
-      // streaming
-      cache: 'no-store',
-    },
+    // {
+    //   // We intentionally disable Next.js Cache to better demo
+    //   // streaming
+    //   cache: 'no-store',
+    // },
   );
 
   const product = (await data.json()) as Product;
@@ -70,7 +70,7 @@ export function Pricing({
       <ProductPrice price={price} discount={product.discount} />
 
       <div className="relative">
-        <div className="absolute top-1 -left-4">
+        <div className="absolute -left-4 top-1">
           <Ping />
         </div>
       </div>
